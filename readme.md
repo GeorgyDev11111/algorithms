@@ -1,7 +1,5 @@
+## Алгоритмы на JavaScript
 
-### Algorithms
-```sh
-  npm install
-  # run tests
-  npm run test
-```
+* [**Бинарный поиск**](01_binarySearch/index.js)
+* [**Сортировка выбором**](02_selectionSort/index.js)
+* [**Быстрая сортировка**](03_quickSort/index.js)
