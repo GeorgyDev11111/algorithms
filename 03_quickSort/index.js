@@ -1,3 +1,7 @@
+/**
+ *  Quick sort
+ */
+
 const quickSort = (list) => {
   if(list.length < 2) {
     return list

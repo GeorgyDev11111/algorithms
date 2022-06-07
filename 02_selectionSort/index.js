@@ -1,3 +1,7 @@
+/**
+ *  Selection sort
+ */
+
 const findIndexLess = (list) => {
   let first = list[0]
   let index_less = 0
@@ -9,15 +13,15 @@ const findIndexLess = (list) => {
   }
   return index_less
 }
- 
+
 const selectionSort = (list) => {
-  let newList = []
+  const newList = []
   const length = list.length
   for(let i = 0; i < length; i++) {
-    let index_less = findIndexLess(list)
+    const index_less = findIndexLess(list)
     newList.push(...list.splice(index_less,1))
   }
   return newList
 }
 
-export {selectionSort,findIndexLess}
+export {selectionSort}
