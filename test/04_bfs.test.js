@@ -12,20 +12,18 @@ graph['thom'] = []
 graph['jonny'] = []
 
   // test
-const wrap = () => {
-  return function() {
-    return bfs(graph,'you')
-  }
-}
+const wrap = (graph) => (entrypoint) => (
+  bfs(graph,entrypoint)
+)
 
-const example = wrap()
+const example = wrap(graph)
 
 console.group('bfs:')
 console.log('Previos:',JSON.stringify(graph))
 console.time('1000 итераций за')
 for(let i = 0; i < 1000; i++){
-  example()
+  example('you')
 }
 console.timeEnd('1000 итераций за')
-console.log('Result:', example())
+console.log('Result:', example('you'))
 console.groupEnd()

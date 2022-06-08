@@ -4,13 +4,11 @@ import newRandomArray from './utils/createRandomArray.js'
 const randomArray = newRandomArray(1,25)
 
   // test
-const wrap = () => {
-  return function() {
-    return selectionSort([...randomArray])
-  }
-}
+const wrap = (arr) => () => (
+  selectionSort([...arr])
+)
 
-const example = wrap()
+const example = wrap(randomArray)
 
 console.group('selectionSort:')
 console.log('Previous: ', randomArray)
